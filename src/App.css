@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff8f2; color: #332d2b; font-family: 'Nunito', Arial, sans-serif; }
+button, input, select, textarea { font: inherit; }
+button { border: 0; border-radius: 10px; padding: 11px 15px; cursor: pointer; background: #e66b52; color: white; font-weight: 800; transition: .2s; }
+button:hover { filter: brightness(.95); transform: translateY(-1px); }
+button:disabled { opacity: .45; cursor: not-allowed; transform: none; }
+.page { width: min(1120px, 92%); margin: 35px auto; }
+.hero { background: #ffe4d6; border-radius: 24px; padding: 34px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.eyebrow { color: #b9533f; letter-spacing: 2px; font-size: 12px; font-weight: 800; }
+h1 { margin: 8px 0; font-size: clamp(26px, 4vw, 42px); line-height: 1.15; }
+.hero p:last-child { margin-bottom: 0; color: #71615a; }
+.filters { display: flex; gap: 12px; margin: 25px 0; }
+input, select, textarea { width: 100%; padding: 12px; border: 1px solid #ead8cf; border-radius: 10px; background: white; color: #332d2b; outline-color: #e66b52; }
+.filters input { flex: 2; }
+.filters select { flex: 1; }
+.section-title { display: flex; align-items: center; justify-content: space-between; margin: 10px 0 16px; }
+.section-title h2 { margin: 0; }
+.section-title span { color: #8c7770; }
+.recipe-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.recipe-card { background: white; border: 1px solid #f0e1d9; border-radius: 18px; overflow: hidden; box-shadow: 0 5px 18px #59301a0a; }
+.recipe-image, .recipe-placeholder { width: 100%; height: 170px; object-fit: cover; }
+.recipe-placeholder { display: grid; place-items: center; font-size: 55px; background: #ffede3; }
+.recipe-content { padding: 20px; }
+.category { display: inline-block; padding: 5px 10px; border-radius: 20px; background: #fff0e9; color: #b9533f; font-size: 12px; font-weight: 800; }
+.recipe-content h3 { margin: 10px 0 5px; font-size: 22px; }
+.recipe-content p { color: #766760; margin: 9px 0; }
+.recipe-content ul { margin-top: 0; padding-left: 20px; }
+.actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; }
+.actions button { padding: 9px 11px; font-size: 13px; }
+.secondary { background: #f4e8e1; color: #694d42; }
+.danger { background: #b94b4b; color: white; }
+.empty { text-align: center; padding: 45px 10px; color: #8c7770; background: white; border-radius: 16px; }
+.pagination { display: flex; justify-content: center; align-items: center; gap: 18px; margin: 28px 0; }
+.pagination span { font-weight: 800; }
+.help { background: #fff0e6; border-radius: 16px; padding: 20px 24px; margin-top: 28px; color: #6c5349; }
+.help h3 { margin-top: 0; color: #9c4b3a; }
+.help p { margin: 7px 0; }
+.modal-backdrop { position: fixed; inset: 0; background: #24140f88; display: flex; align-items: center; justify-content: center; padding: 20px; z-index: 10; overflow-y: auto; }
+.recipe-form { background: white; width: min(560px, 100%); max-height: 92vh; overflow-y: auto; padding: 25px; border-radius: 20px; box-shadow: 0 15px 50px #0003; }
+.form-heading { display: flex; justify-content: space-between; align-items: center; }
+.form-heading h2 { margin-top: 0; }
+.close { background: transparent; color: #60483e; padding: 5px 9px; font-size: 20px; }
+.recipe-form label { display: block; margin: 14px 0 6px; font-weight: 800; font-size: 14px; }
+.ingredient-row { display: flex; gap: 8px; margin-bottom: 8px; }
+.ingredient-row input { flex: 1; }
+.small { padding: 8px 10px; font-size: 12px; }
+.add-ingredient { margin-top: 2px; }
+input[type="range"] { padding: 0; accent-color: #e66b52; }
+input[type="file"] { padding: 8px; }
+.form-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 22px; }
+@media (max-width: 700px) {
+  .hero { align-items: flex-start; flex-direction: column; padding: 25px; }
+  .filters { flex-direction: column; }
+  .recipe-grid { grid-template-columns: 1fr; }
+  .page { margin: 18px auto; }
+  .ingredient-row { align-items: center; }
+}
